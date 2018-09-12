@@ -101,16 +101,16 @@ inline float findOrthoLine(Vec4i a, Vec4i b){
 void CwjjcDlg::PicJudgement()
 {
 
-	//int month1[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-	//int month2[12] = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+	int startJudge=1;
+	int stopJudge=6;
+
 	/*int m_JudgeTime = 6;*/
 	vector<string> firstfiles;		//获取所有IP文件夹
 	vector<string> secondfiles;		//获取所有预置点文件夹
 	vector<string> thirdfiles;  //获取所有年月文件夹
 	vector<string> fourthfiles; //获取所有图片路径
-	vector<string> fourthfiles2;
+	vector<string> fifthfiles; //某一预置点所有图片路径
 	string firstpath = "D:\\aswj";
-	string secondpath;
 	string sImgPathPast;
 	string sImgPathNow;
 	int iPicNum = 0;
@@ -151,156 +151,48 @@ void CwjjcDlg::PicJudgement()
 		{
 			thirdfiles.clear();
 			GetAllCatalog(secondfiles[j], thirdfiles);
-			if (thirdfiles.size()<3){ continue;}
-			/*for (int k = 2; k <=thirdfiles.size()-1; k++)*/
+			for (int k = 2; k <= thirdfiles.size() - 1; k++)
 			{
+				GetAllFiles(thirdfiles[k], fourthfiles);
+				for (int l = 0; l < fourthfiles.size(); l++)
+				{
+					fifthfiles.push_back(fourthfiles[l]);
+				}
 				fourthfiles.clear();
-				fourthfiles2.clear();
-				GetAllFiles(thirdfiles[thirdfiles.size() - 1], fourthfiles);
-				if (fourthfiles.size()==0){ continue; }
-				if (fourthfiles.size() < m_JudgeTime)
+			}
+			sImgPathPast = *(fifthfiles.end() - startJudge);
+			sImgPathNow = *(fifthfiles.end() - stopJudge);
+			FinalProcess(sImgPathPast, sImgPathNow);
+			iPicOrder++;
+			double percent = (double)iPicOrder / (double)iPicNum*100.00;
+			int iPercent = iPicOrder * 100 / iPicNum;
+			for (int i = 0; i <= 100; i++)
+			{
+				if (i< percent)
 				{
-					if (thirdfiles.size() < 4){ continue; }
-					sImgPathNow = *(fourthfiles.end() - 1);
-					GetAllFiles(thirdfiles[thirdfiles.size() - 2], fourthfiles2);
-					if (fourthfiles2.size() < (m_JudgeTime - fourthfiles.size() + 1)) { continue; }
-					sImgPathPast = *(fourthfiles2.end() - 1 - m_JudgeTime + fourthfiles.size());
-
+					cout << "=";
+					continue;
 				}
-				/*sImgPathPast = *(fourthfiles.end() - m_JudgeTime-1);*/
-				else
+				if (i == (int)percent + 1)
 				{
-					if (fourthfiles.size() < (m_JudgeTime + 1)){ continue; }
-					sImgPathPast = *(fourthfiles.end() - m_JudgeTime - 1);
-					sImgPathNow = *(fourthfiles.end() - 1);
+					cout << ">";
+					continue;
 				}
-				FinalProcess(sImgPathPast, sImgPathNow);
-				iPicOrder++;
-				double percent = (double)iPicOrder / (double)iPicNum*100.00;
-				int iPercent = iPicOrder * 100 / iPicNum;
-				for (int i = 0; i <= 100; i++)
+				if (i < 100)
 				{
-					if (i< percent)
-					{
-						cout << "=";
-						continue;
-					}
-					if (i == (int)percent + 1)
-					{
-						cout << ">";
-						continue;
-					}
-					if (i < 100)
-					{
-						cout << "_";
-					}
+					cout << "_";
 				}
+			}
 				printf("%2d%%\r", iPercent);
 
 				/*myProCtrl->SetPos(iPicOrder);*/
-			}
+			
 		}
 	}
 
 
 }
-//void CwjjcDlg::PicJudgement()
-//{
-//	//int month1[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-//	//int month2[12] = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-//	/*int m_JudgeTime = 6;*/
-//	vector<string> firstfiles;		//获取所有IP文件夹
-//	vector<string> secondfiles;		//获取所有预置点文件夹
-//	vector<string> thirdfiles;  //获取所有年月文件夹
-//	vector<string> fourthfiles; //获取所有图片路径
-//	vector<string> fourthfiles2;
-//	string firstpath = "D:\\aswj";
-//	string secondpath;
-//	string sImgPathPast;
-//	string sImgPathNow;
-//	int iPicNum = 0;
-//	int iPicOrder = 0;
-//	GetAllCatalog(firstpath, firstfiles);
-//	for (int i = 2; i <= firstfiles.size() - 1; i++)
-//	{
-//		secondfiles.clear();
-//		GetAllCatalog(firstfiles[i], secondfiles);
-//		for (int j = 2; j <= secondfiles.size() - 1; j++)
-//		{
-//			/*thirdfiles.clear();
-//			GetAllCatalog(secondfiles[j], thirdfiles);*/
-//			/*for (int k = 2; k <= thirdfiles.size() - 1; k++)
-//			{*/
-//			iPicNum++;
-//			/*}*/
-//		}
-//	}
-//
-//	/*myProCtrl->SetRange(0, iPicNum);*/
-//	firstfiles.clear();
-//	secondfiles.clear();
-//	thirdfiles.clear();
-//	fourthfiles.clear();
-//	GetAllCatalog(firstpath, firstfiles);
-//	for (int i = 2; i <= firstfiles.size() - 1; i++)
-//	{
-//		secondfiles.clear();
-//		GetAllCatalog(firstfiles[i], secondfiles);
-//		for (int j = 2; j <= secondfiles.size() - 1; j++)
-//		{
-//			thirdfiles.clear();
-//			GetAllCatalog(secondfiles[j], thirdfiles);
-//			/*for (int k = 2; k <=thirdfiles.size()-1; k++)*/
-//			{
-//				fourthfiles.clear();
-//				fourthfiles2.clear();
-//				GetAllFiles(thirdfiles[thirdfiles.size() - 1], fourthfiles);
-//				if (fourthfiles.size() == 0){ continue; }
-//				if (fourthfiles.size() < m_JudgeTime)
-//				{
-//					sImgPathNow = *(fourthfiles.end() - 1);
-//					GetAllFiles(thirdfiles[thirdfiles.size() - 2], fourthfiles2);
-//					if (fourthfiles2.size() < (m_JudgeTime - fourthfiles.size() + 1)) { continue; }
-//					sImgPathPast = *(fourthfiles2.end() - 1 - m_JudgeTime + fourthfiles.size());
-//
-//				}
-//				/*sImgPathPast = *(fourthfiles.end() - m_JudgeTime-1);*/
-//				else
-//				{
-//					if (fourthfiles.size() < (m_JudgeTime + 1)){ continue; }
-//					sImgPathPast = *(fourthfiles.end() - m_JudgeTime - 1);
-//					sImgPathNow = *(fourthfiles.end() - 1);
-//				}
-//				FinalProcess(sImgPathPast, sImgPathNow);
-//				iPicOrder++;
-//				double percent = (double)iPicOrder / (double)iPicNum*100.00;
-//				int iPercent = iPicOrder * 100 / iPicNum;
-//				for (int i = 0; i <= 100; i++)
-//				{
-//					if (i< percent)
-//					{
-//						cout << "=";
-//						continue;
-//					}
-//					if (i == (int)percent + 1)
-//					{
-//						cout << ">";
-//						continue;
-//					}
-//					if (i < 100)
-//					{
-//						cout << "_";
-//					}
-//				}
-//				printf("%2d%%\r", iPercent);
-//
-//				/*myProCtrl->SetPos(iPicOrder);*/
-//			}
-//		}
-//	}
-//
-//
-//}
+
 
 void CwjjcDlg::GetAllFiles(string path, vector<string>& files)
 {

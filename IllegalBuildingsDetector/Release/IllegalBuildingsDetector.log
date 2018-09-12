@@ -1,67 +1,80 @@
-﻿  IllegalBuildingsDetector.cpp
-E:\ThirdPartyLib\opencv3.0+contrib\install\include\opencv2/core/mat.hpp(1965): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-E:\ThirdPartyLib\opencv3.0+contrib\install\include\opencv2/core/persistence.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-E:\ThirdPartyLib\opencv3.0+contrib\install\include\opencv2/core/utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
-          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\include\afx.h(33) : 参见“MBCS_Support_Deprecated_In_MFC”的声明
-IllegalBuildingsDetector.cpp(56): warning C4244: “return”: 从“double”转换到“const float”，可能丢失数据
-IllegalBuildingsDetector.cpp(73): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-IllegalBuildingsDetector.cpp(123): warning C4018: “<=”: 有符号/无符号不匹配
-IllegalBuildingsDetector.cpp(128): warning C4018: “<=”: 有符号/无符号不匹配
-IllegalBuildingsDetector.cpp(145): warning C4018: “<=”: 有符号/无符号不匹配
-IllegalBuildingsDetector.cpp(150): warning C4018: “<=”: 有符号/无符号不匹配
-IllegalBuildingsDetector.cpp(161): warning C4018: “<”: 有符号/无符号不匹配
-IllegalBuildingsDetector.cpp(173): warning C4018: “<”: 有符号/无符号不匹配
-IllegalBuildingsDetector.cpp(439): warning C4018: “<”: 有符号/无符号不匹配
-IllegalBuildingsDetector.cpp(442): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-IllegalBuildingsDetector.cpp(449): warning C4018: “<”: 有符号/无符号不匹配
-IllegalBuildingsDetector.cpp(451): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-IllegalBuildingsDetector.cpp(464): warning C4018: “<”: 有符号/无符号不匹配
-IllegalBuildingsDetector.cpp(489): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-IllegalBuildingsDetector.cpp(638): warning C4018: “<”: 有符号/无符号不匹配
-IllegalBuildingsDetector.cpp(366): warning C4101: “flag1”: 未引用的局部变量
-IllegalBuildingsDetector.cpp(750): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-IllegalBuildingsDetector.cpp(800): warning C4305: “参数”: 从“double”到“float”截断
-IllegalBuildingsDetector.cpp(900): warning C4018: “<”: 有符号/无符号不匹配
-IllegalBuildingsDetector.cpp(905): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
-IllegalBuildingsDetector.cpp(906): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
-IllegalBuildingsDetector.cpp(931): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
-IllegalBuildingsDetector.cpp(933): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
-IllegalBuildingsDetector.cpp(1028): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-IllegalBuildingsDetector.cpp(1171): warning C4018: “<”: 有符号/无符号不匹配
-IllegalBuildingsDetector.cpp(1191): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
-IllegalBuildingsDetector.cpp(1192): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
-IllegalBuildingsDetector.cpp(1264): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
-IllegalBuildingsDetector.cpp(1265): warning C4018: “<”: 有符号/无符号不匹配
-IllegalBuildingsDetector.cpp(1268): warning C4018: “<”: 有符号/无符号不匹配
-IllegalBuildingsDetector.cpp(1279): warning C4554: “&”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
-IllegalBuildingsDetector.cpp(1281): warning C4244: “+=”: 从“float”转换到“int”，可能丢失数据
-IllegalBuildingsDetector.cpp(1290): warning C4018: “<”: 有符号/无符号不匹配
-IllegalBuildingsDetector.cpp(1302): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
-IllegalBuildingsDetector.cpp(1348): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-IllegalBuildingsDetector.cpp(1355): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-IllegalBuildingsDetector.cpp(1356): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-IllegalBuildingsDetector.cpp(1420): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
-IllegalBuildingsDetector.cpp(1652): warning C4018: “<”: 有符号/无符号不匹配
-IllegalBuildingsDetector.cpp(1669): warning C4018: “<”: 有符号/无符号不匹配
-IllegalBuildingsDetector.cpp(1674): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-IllegalBuildingsDetector.cpp(1675): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-IllegalBuildingsDetector.cpp(1676): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-IllegalBuildingsDetector.cpp(1677): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-IllegalBuildingsDetector.cpp(1680): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-IllegalBuildingsDetector.cpp(1681): warning C4554: “|”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
-IllegalBuildingsDetector.cpp(1765): warning C4018: “<”: 有符号/无符号不匹配
-IllegalBuildingsDetector.cpp(1843): warning C4018: “<”: 有符号/无符号不匹配
-IllegalBuildingsDetector.cpp(1883): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-IllegalBuildingsDetector.cpp(1892): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-IllegalBuildingsDetector.cpp(1908): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-IllegalBuildingsDetector.cpp(1916): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-IllegalBuildingsDetector.cpp(2050): warning C4305: “参数”: 从“double”到“float”截断
-IllegalBuildingsDetector.cpp(2226): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
-IllegalBuildingsDetector.cpp(2227): warning C4018: “<”: 有符号/无符号不匹配
-IllegalBuildingsDetector.cpp(2230): warning C4244: “+=”: 从“float”转换到“int”，可能丢失数据
-IllegalBuildingsDetector.cpp(2234): warning C4018: “<”: 有符号/无符号不匹配
-IllegalBuildingsDetector.cpp(2258): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
-  正在生成代码
-  已完成代码的生成
-  IllegalBuildingsDetector.vcxproj -> D:\安顺违建安装\修改\IllegalBuildingsDetector\Release\IllegalBuildingsDetector.exe
+﻿生成启动时间为 2018/9/11 21:26:38。
+     1>项目“E:\GeorgeProject\IllegalBuildingsDetector\IllegalBuildingsDetector.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _MBCS /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt IllegalBuildingsDetector.cpp
+         IllegalBuildingsDetector.cpp
+     1>E:\ThirdPartyLib\opencv3.0+contrib\install\include\opencv2/core/mat.hpp(1965): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>E:\ThirdPartyLib\opencv3.0+contrib\install\include\opencv2/core/persistence.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>E:\ThirdPartyLib\opencv3.0+contrib\install\include\opencv2/core/utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\include\afx.h(33) : 参见“MBCS_Support_Deprecated_In_MFC”的声明
+     1>IllegalBuildingsDetector.cpp(56): warning C4244: “return”: 从“double”转换到“const float”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(73): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(123): warning C4018: “<=”: 有符号/无符号不匹配
+     1>IllegalBuildingsDetector.cpp(128): warning C4018: “<=”: 有符号/无符号不匹配
+     1>IllegalBuildingsDetector.cpp(145): warning C4018: “<=”: 有符号/无符号不匹配
+     1>IllegalBuildingsDetector.cpp(150): warning C4018: “<=”: 有符号/无符号不匹配
+     1>IllegalBuildingsDetector.cpp(154): warning C4018: “<=”: 有符号/无符号不匹配
+     1>IllegalBuildingsDetector.cpp(157): warning C4018: “<”: 有符号/无符号不匹配
+     1>IllegalBuildingsDetector.cpp(427): warning C4018: “<”: 有符号/无符号不匹配
+     1>IllegalBuildingsDetector.cpp(430): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(437): warning C4018: “<”: 有符号/无符号不匹配
+     1>IllegalBuildingsDetector.cpp(439): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(452): warning C4018: “<”: 有符号/无符号不匹配
+     1>IllegalBuildingsDetector.cpp(477): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(626): warning C4018: “<”: 有符号/无符号不匹配
+     1>IllegalBuildingsDetector.cpp(354): warning C4101: “flag1”: 未引用的局部变量
+     1>IllegalBuildingsDetector.cpp(738): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(788): warning C4305: “参数”: 从“double”到“float”截断
+     1>IllegalBuildingsDetector.cpp(888): warning C4018: “<”: 有符号/无符号不匹配
+     1>IllegalBuildingsDetector.cpp(893): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(894): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(919): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(921): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(1016): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(1159): warning C4018: “<”: 有符号/无符号不匹配
+     1>IllegalBuildingsDetector.cpp(1179): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(1180): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(1252): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(1253): warning C4018: “<”: 有符号/无符号不匹配
+     1>IllegalBuildingsDetector.cpp(1256): warning C4018: “<”: 有符号/无符号不匹配
+     1>IllegalBuildingsDetector.cpp(1267): warning C4554: “&”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
+     1>IllegalBuildingsDetector.cpp(1269): warning C4244: “+=”: 从“float”转换到“int”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(1278): warning C4018: “<”: 有符号/无符号不匹配
+     1>IllegalBuildingsDetector.cpp(1290): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(1336): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(1343): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(1344): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(1408): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(1640): warning C4018: “<”: 有符号/无符号不匹配
+     1>IllegalBuildingsDetector.cpp(1657): warning C4018: “<”: 有符号/无符号不匹配
+     1>IllegalBuildingsDetector.cpp(1662): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(1663): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(1664): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(1665): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(1668): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(1669): warning C4554: “|”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
+     1>IllegalBuildingsDetector.cpp(1753): warning C4018: “<”: 有符号/无符号不匹配
+     1>IllegalBuildingsDetector.cpp(1831): warning C4018: “<”: 有符号/无符号不匹配
+     1>IllegalBuildingsDetector.cpp(1871): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(1880): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(1896): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(1904): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(2038): warning C4305: “参数”: 从“double”到“float”截断
+     1>IllegalBuildingsDetector.cpp(2214): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(2215): warning C4018: “<”: 有符号/无符号不匹配
+     1>IllegalBuildingsDetector.cpp(2218): warning C4244: “+=”: 从“float”转换到“int”，可能丢失数据
+     1>IllegalBuildingsDetector.cpp(2222): warning C4018: “<”: 有符号/无符号不匹配
+     1>IllegalBuildingsDetector.cpp(2246): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\GeorgeProject\Release\IllegalBuildingsDetector.exe" /INCREMENTAL:NO /NOLOGO opencv_bgsegm300.lib opencv_calib3d300.lib opencv_ccalib300.lib opencv_core300.lib opencv_datasets300.lib opencv_face300.lib opencv_features2d300.lib opencv_flann300.lib winmm.lib opencv_hal300.lib opencv_highgui300.lib opencv_imgcodecs300.lib opencv_imgproc300.lib opencv_line_descriptor300.lib opencv_ml300.lib opencv_objdetect300.lib opencv_optflow300.lib opencv_photo300.lib opencv_reg300.lib opencv_rgbd300.lib opencv_saliency300.lib opencv_shape300.lib opencv_stitching300.lib opencv_superres300.lib opencv_surface_matching300.lib opencv_text300.lib opencv_tracking300.lib opencv_ts300.lib opencv_video300.lib opencv_videoio300.lib opencv_videostab300.lib opencv_xfeatures2d300.lib opencv_ximgproc300.lib opencv_xobjdetect300.lib opencv_xphoto300.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"E:\GeorgeProject\Release\IllegalBuildingsDetector.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\GeorgeProject\Release\IllegalBuildingsDetector.lib" /MACHINE:X86 /SAFESEH Release\IllegalBuildingsDetector.obj
+         Release\Run.obj
+         Release\stdafx.obj
+         正在生成代码
+         已完成代码的生成
+         IllegalBuildingsDetector.vcxproj -> E:\GeorgeProject\Release\IllegalBuildingsDetector.exe
+     1>已完成生成项目“E:\GeorgeProject\IllegalBuildingsDetector\IllegalBuildingsDetector.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.00
