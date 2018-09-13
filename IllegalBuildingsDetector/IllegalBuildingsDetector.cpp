@@ -160,6 +160,7 @@ void CwjjcDlg::PicJudgement()
 				}
 				fourthfiles.clear();
 			}
+			if (fifthfiles.size() < startJudge){ continue; }
 			sImgPathPast = *(fifthfiles.end() - startJudge);
 			sImgPathNow = *(fifthfiles.end() - stopJudge);
 			FinalProcess(sImgPathPast, sImgPathNow);
@@ -286,31 +287,11 @@ void CwjjcDlg::FinalProcess(string ImgPathPast, string ImgPathNow)
 	Mat transform;
 	int IsMatch = OpenCVSurfMatch(Img6, Img5, transform);
 	//int IsMatch = PictureMatch(ImgPathNow.c_str(), ImgPathPast.c_str());//图像配准
-	if (IsMatch == 1){
-		/*MessageBox("极端天气或预置点异常");*/
-	/*	cout << ImgPathNow << "not match1" << endl;*/
+	
+	if (IsMatch){
 		return;
 	}
-	//if (IsMatch == 2){
-	//	/*存在雾天的情况，尝试去雾后再进行图片配准*/
-	//	IplImage* w1 = cvLoadImage(ImgPathNow.c_str(), 3);//暗通道去雾改进
-	//	IplImage* w2 = cvLoadImage(ImgPathPast.c_str(), 3);
-	//	w1 = dcp(1, 1, 0, 0, w1, TRUE);
-	//	w2 = dcp(1, 1, 0, 0, w2, TRUE);
-	//	cvSaveImage(ImgPathNow.c_str(), w1);
-	//	cvSaveImage(ImgPathPast.c_str(), w2);
-	//	cvReleaseImage(&w1);
-	//	cvReleaseImage(&w2);
 
-	//	IsMatch = PictureMatch(ImgPathNow.c_str(), ImgPathPast.c_str());//图像配准
-	//	if (IsMatch != 0)
-	//		return;
-	//}
-	if (IsMatch == 3){	//输入的图像几乎一样，以防止配准死循环
-		/*MessageBox("输入图片没有变化");*/
-	/*	cout << ImgPathNow << "not match2" << endl;*/
-		return;
-	}
 	//PictureMatch(CString2string(Img1Name).c_str(), CString2string(Img2Name).c_str());//图像配准
 	CString cMatchPath = g_strWorkDir + "\\MatchPic\\tempPic.jpg";
 	char* MatchPath;
@@ -723,6 +704,10 @@ int CwjjcDlg::OpenCVSurfMatch(const Mat& colorImg1, const Mat& colorImg2, Mat& t
 	Mat H = findHomography(obj, scene, RANSAC);      //寻找匹配的图像 
 	Mat tranH = findHomography(scene, obj, RANSAC);
 	tran = tranH;//保存反变换矩阵
+	if (H.cols < 3)
+	{
+		return 1;
+	}
 	Mat BlackEdge(colorImg1.rows, colorImg1.cols, CV_8UC3, Scalar(255, 255, 255));
 	/*perspectiveTransform(obj_corners, scene_corners, H);*/
 	warpPerspective(colorImg1, imageTransform, H, Size(colorImg2.cols, colorImg2.rows));
